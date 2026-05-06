@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&family=DM+Serif+Display:italic&family=JetBrains+Mono:wght@400;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-serif: "DM Serif Display", serif;
+  --font-mono: "JetBrains Mono", monospace;
+  
+  --color-navy: #0A192F;
+  --color-navy-light: #112240;
+  --color-phoenix: #FF8C00;
+  --color-mekong: #00A8E8;
+}
+
+@layer base {
+  body {
+    @apply bg-navy text-slate-100 font-sans selection:bg-mekong/30;
+  }
+}
+
+.geometric-border {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.geometric-accent-left {
+  @apply border-l-2 border-phoenix pl-6;
+}
+
+.text-technical {
+  @apply font-mono text-[10px] uppercase tracking-[0.2em];
+}
+
+.glass-panel {
+  background: rgba(17, 34, 64, 0.4);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.text-gradient-mekong {
+  background: linear-gradient(to right, #00A8E8, #00FFE0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-mesh {
+  background-image: 
+    radial-gradient(circle at 2px 2px, rgba(255,255,255,0.05) 1px, transparent 0);
+  background-size: 32px 32px;
+}
